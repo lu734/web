@@ -1,0 +1,205 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Nanum Gothic Coding", monospace;
+    font-weight: 400;
+}
+
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px; 
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 1000; /* Asegura que el header esté siempre por encima */
+    
+}
+
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px; /* Altura del footer */
+    background-color: rgba(255, 255, 255, 0);
+    text-align: end;
+    z-index: 1000; /* Asegura que el footer esté siempre por encima */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.R-Icon{
+    margin: 0 200px 0 0; 
+    animation-name: start-degrade;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 1.6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    filter: drop-shadow(0 8px 8px rgba(48, 48, 48, 0.237)); 
+}
+
+.main-title{
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    animation-name: start-degrade;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 1.6s;
+    animation-fill-mode: forwards;
+    text-shadow: 4px 4px 6px rgba(40, 40, 40, 0.3); /* Sombra del texto */
+    opacity: 0;
+    /*text-decoration: underline;
+    text-underline-offset: 15px;
+    text-decoration-thickness: 2px;*/
+    
+}
+
+
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #e3e3e3;
+    background-image: url(Assets/Background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/*fondo con imagen*/
+/*
+
+.main-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #e3e3e3;
+    overflow: hidden; 
+}
+
+.main-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/Assets/Fondo.png');
+    background-size: 140%;
+    background-position: center 43%; 
+    opacity: 0.02; 
+    z-index: 1; 
+}
+
+.main-section > * {
+    position: relative;
+    z-index: 2; 
+}
+*/
+
+.button-list {
+    width: 100%;
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-list-item-link {
+    text-decoration: none;
+}
+
+
+.button-list-item-image {
+    width: 310px; 
+    height: auto;
+    margin: 0 50px 0 50px;
+    transition: box-shadow 0.6s ease, transform 0.6s ease;
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5)); 
+    transform: translateZ(0); /* Ayuda a mantener la calidad */
+    
+}
+
+.button-list-item-image:hover {
+    filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.5)); 
+    transform: scale(1.06); 
+
+}
+
+.button-list-item-text-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.button-list-item-text {
+    display: inline;
+    font-size:30px; 
+    color: #2b2b2b; 
+    justify-content: center;
+    opacity: 0;
+    animation-name: start-degrade;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 1.6s;
+    animation-fill-mode: forwards;
+    text-shadow: 4px 4px 6px rgba(23, 23, 23, 0.3); /* Sombra del texto */
+
+}
+
+#button-prod-image {
+    width: 385px; 
+    animation-name: start-degrade;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+#button-blog-image {
+    opacity: 0;
+    animation-name: start-degrade;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+#button-drop-image {
+    opacity: 0;
+    animation-name: start-degrade;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes start-degrade {
+    0%{
+        opacity: 0%;
+    }
+    
+    40%{
+        opacity: 0%;
+    }
+
+    100%{
+        opacity: 100%;
+    }
+
+}
